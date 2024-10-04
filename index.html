@@ -32,7 +32,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Combining Planning and Diffusion for Mobility with Unknown Dynamics<br></h1>
+          <h1 class="title is-1 publication-title">Combining Planning and Diffusion for Mobility with Unknown Dynamics<br>for Mobility with Unknown Dynamics</h1>
           <h3 class="title is-4 conference-authors"><a target="_blank" href="https://2025.ieee-icra.org">ICRA 2025</a></h3>
           <div class="is-size-5 publication-authors"></div>
             <span class="author-block">
@@ -215,7 +215,31 @@
           </p>
         <br><br> -->
         <p class="justify" style="padding-left: 8rem; padding-right: 8rem; padding-bottom: 2rem; ">
-          This paper introduces an approach for learning to solve continuous constraint satisfaction problems (CCSP) in robotic reasoning and planning. Previous methods primarily rely on hand-engineering or learning generators for specific constraint types and then rejecting the value assignments when other constraints are violated. By contrast, our model, the compositional diffusion continuous constraint solver (Diffusion-CCSP) derives global solutions to CCSPs by representing them as factor graphs and combining the energies of diffusion models trained to sample for individual constraint types. Diffusion-CCSP exhibits strong generalization to novel combinations of known constraints, and it can be integrated into a task and motion planner to devise long-horizon plans that include actions with both discrete and continuous parameters.
+            Manipulation of large objects over long horizons
+            (such as carts in a warehouse) is an essential skill for deployable
+            robotic systems. Large objects require mobile manipulation
+            which involves simultaneous manipulation, navigation, and
+            movement with the object in tow. In many real-world situations,
+            object dynamics are incredibly complex, such as the interaction
+            of an office chair (with a rotating base and five caster wheels)
+            and the ground. We present a hierarchical algorithm for long-
+            horizon robot manipulation problems in which the dynamics are
+            partially unknown. We observe that diffusion-based behavior
+            cloning is highly effective for short-horizon problems with
+            unknown dynamics, so we decompose the problem into an
+            abstract high-level, obstacle-aware motion-planning problem
+            that produces a waypoint sequence. We use a short-horizon,
+            relative-motion diffusion policy to achieve the waypoints in
+            sequence. We train mobile manipulation policies on a Spot robot
+            that has to push and pull an office chair. Our hierarchical ma-
+            nipulation policy performs consistently better, especially when
+            the horizon increases, compared to a diffusion policy trained
+            on long-horizon demonstrations or motion planning assuming
+            a rigidly-attached object (success rate of 8 (versus 0 and 5
+            respectively) out of 10 runs). Importantly, our learned policy
+            generalizes to new layouts, grasps, chairs, and flooring that
+            induces more friction, without any further training, showing
+            promise for other complex mobile manipulation problems
         </p>
 
         <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;">Domains</h3>
