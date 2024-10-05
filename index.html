@@ -194,12 +194,14 @@
       <img src="media/figures/constraints.png" class="full-image" style="width:60%;padding-bottom: 2.5rem" alt="" />
 
       <h2 class="subtitle has-text-centered">
-        We seek an approach that (a) allows the robot to be trained
-quickly in the real world, without access to a simulator as
-the complex dynamics present a large sim-to-real gap, and
-(b) generalizes to somewhat different environment
-        Our <span class="popi">Diffusion-CCSP</span> derives global solutions to CCSPs by representing them as factor graphs and combining the energies of diffusion models trained to sample for individual constraint types.
-      </h2>
+        We seek an approach that <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(a) allows the robot to be trained quickly in the real world, without access to a simulator as the complex dynamics present a large sim-to-real gap, <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(b) generalizes to somewhat different environment.<br><br>
+        <span class="popi">Planner-Ordered Policy</span> learns as hort-horizon, diffusion-based
+        manipulation policy  policy via imitation learning and uses a “global” motion planner
+        to define waypoints for the local policy.
+    </h2>
+    
 
       <img src="media/figures/compose.png" class="full-image" style="width:60%;padding-bottom: 0.5rem" alt="" />
 
