@@ -239,22 +239,24 @@
 
       <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;"><span class="popi">Planner-Ordered Policy</span></h3>
       <img src="media/figures/popi.png" class="full-image" style="width:60%;padding-bottom: 2.5rem" alt="" />
-      <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;">Domains</h3>
-
-        <h3 class="subtitle has-text-centered">
-          Example domains that contain geometric, physical, and qualitative constraints:
-        </h3>
+      <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;">Experiments</h3>
 
         <img src="media/figures/domains.png" class="full-image" style="width:80%" alt="" />
 
         <div style="padding-left: 4rem; ">
           <p>
-            <b>Constraints in the above tasks</b>:
+            <b>Tasks</b>:
             <ul>
-              <li>(a) The triangles must not collide with each other and fit in the container.</li>
-              <li>(b) The configuration of rectangles must satisfy a given set of qualitative constraints, in total 13 types. For example, <i>left-in(yellow, box)</i> and <i>horizontally-aligned(green, blue)</i>. The figure illustrates a subset of the 45 constraints present in the problem.</li>
-              <li>(c) The boxes must fit in between the shelves in a stable configuration. The arrows show the current support relationships.</li>
-              <li>(d) The objects must fit inside the container and there exist a packing order such that the gripper won't collide with any object or the container during placing.</li>
+              <li>(a) Testing the long-horizon success to move the chair on a 10m trajectory, with 3 turns, around an obstacle</li>
+              <li>(b) Testing the generalization on an environment with more complex dynamics (friction from carpeted floor) and different obstacle configuration</li>
+              <li>(c) Testing the generalization with an unseen chair & unseen grasp. Both present novel dynamics not seen in training demonstrations.</li>
+          </p>
+          <p>
+            <b>Baselines</b>:
+            <ul>
+              <li>(1) RRT</li>
+              <li>(2) A*</li>
+              <li>(3) Global Diffusion</li>
           </p>
         </div>
 
