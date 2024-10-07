@@ -163,6 +163,11 @@ h3 {
   border-radius: 10px;
 }
 
+
+.video-results {
+    overflow: hidden;
+  }
+
 .video-table {
   background-color: white;
   overflow: hidden;
