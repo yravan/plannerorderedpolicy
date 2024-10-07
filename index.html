@@ -251,6 +251,9 @@
               <li>(b) Testing the generalization on an environment with more complex dynamics (friction from carpeted floor) and different obstacle configuration</li>
               <li>(c) Testing the generalization with an unseen chair & unseen grasp. Both present novel dynamics not seen in training demonstrations.</li>
           </p>
+        </div>
+
+        <div style="padding-left: 4rem; ">
           <p>
             <b>Baselines</b>:
             <ul>
@@ -289,23 +292,31 @@
       <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;">Results</h3>
 
       <h3 class="subtitle has-text-centered">
-        Diffusion-CCSP is able to solve unseen problems and even problems with more objects than it is trained with, as shown in the <b>Accumulated number of problems solved in 10 runs of different models</b>:
+        We find that <span class="popi">PoPi</span> performs consistently better as the horizon
+            increases, compared to a ”global” diffusion policy or motion
+            planning assuming a rigidly-attached object. Importantly,
+            PoPi generalizes to new layouts, grasps, chairs, and even
+            flooring, without any further training
       </h3>
 
       <img src="media/figures/results.png" class="full-image" style="width:80%;padding-bottom: 2.5rem" alt="" />
 
-      <div style="padding-left: 4rem; ">
-        <p>
-          Note that:
-          <ul>
-            <li><b>Diffusion-CCSP (ULA)</b>: our method with annealed unadjusted Langevin algorithm to sample from composed diffusion models. <ul><li>This method performs better than other baselines (except for Task (a) comparing to StructDiffusion), especially in harder problems. </li></ul></li>
-            <li><b>Diffusion-CCSP (Reverse)</b>: our method with the standard reverse diffusion process to sample from composed diffusion models. <ul><li>This method is faster at sampling than ULA, but is generally found to have worse generalization performance. </li></ul></li>
-            <li><b>StructDiffusion</b>: Instead of composing diffusion models, a single Transformer is used that takes in a sequence of object embeddings, each of which is the concatenation of the geometry and pose embedding (and grasp embedding for Task (d)) plus time embedding. <ul><li>The transformer architecture used in StructDiffusion successfully models the relational structure among all pairs of objects. It can achieve a similar performance as our model for the simpler task Task (d); but on more complicated tasks such as Task (b), our compositional diffusion model outperforms it.</li></ul></li>
-            <li><b>Rejection-Sampling</b>: We sequentially sample each decision variable according to a generic sampler and check all constraints. For each variable, we sample at most 50 samples. <ul><li>It completely failed for Task (c) and hard tasks in (b) and (d).</li></ul></li>
-            <li>OOD = Out of Training Distribution, i.e. more objects in each problem than in the training problems.</li>
-          </ul>
-        </p>
-      </div>
+
+      <table class='video-table'>
+        <tr>
+          <th>RRT vs <span class="popi">PoPi</span> vs Long-Horizon Diffusion</th>
+        </tr>
+        <tr>
+          <td>
+            <!-- <b>Execution Trajectories Planning by RRT</b> -->
+            <video poster="" autoplay muted loop height="100%" playbackRate=2>
+              <source src="media/ours_vs_baselines.mp4" type="video/mp4">
+            </video>
+          </td>
+        </tr>
+      </table>
+
+      
 
     </div>
   </div>
