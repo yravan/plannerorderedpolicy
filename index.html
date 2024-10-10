@@ -23,9 +23,7 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
-<body onload="updateResultVideo();">
 
 <section class="hero" style="background-color: #ffffff; z-index:-10">
   <div class="hero-body">
@@ -33,23 +31,24 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Combining Planning and Diffusion <br>for Mobility with Unknown Dynamics</h1>
-          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://2025.ieee-icra.org/">ICRA 2025</a></h3>
+          <!-- <h3 class="title is-4 publication-venue"><a target="_blank" href="https://2025.ieee-icra.org/">ICRA 2025</a></h3> -->
+          <h3 class="title is-4 conference-authors" style="margin-bottom: 0px !important;">In Submission</h3>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-                <a target="_blank" href="https://yravan.github.io/">Yajvan Ravan</a><sup>1</sup>,</span>
+                <a target="_blank" href="https://yravan.github.io/">Yajvan Ravan</a>,</span>
             <span class="author-block">
-              <a target="_blank" href="https://zt-yang.com/">Zhutian Yang</a><sup>1</sup>,</span>
+              <a target="_blank" href="https://zt-yang.com/">Zhutian Yang</a>,</span>
             <span class="author-block">
-              <a target="_blank" href="https://taochenshh.github.io/">Tao Chen</a><sup>1</sup>,</span><br>
+              <a target="_blank" href="https://taochenshh.github.io/">Tao Chen</a>,</span><br>
             <span class="author-block">
-              <a target="_blank" href="http://people.csail.mit.edu/tlp/">Tomás Lozano-Pérez</a><sup>1</sup>,</span>
+              <a target="_blank" href="http://people.csail.mit.edu/tlp/">Tomás Lozano-Pérez</a>,</span>
             <span class="author-block">
-              <a target="_blank" href="http://people.csail.mit.edu/lpk/">Leslie Kaelbling</a><sup>1</sup>
+              <a target="_blank" href="http://people.csail.mit.edu/lpk/">Leslie Kaelbling</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>MIT</span>
+            <span class="author-block">MIT CSAIL</span>
           </div>
 
           <div class="column has-text-centered">
@@ -119,7 +118,7 @@
     <div class="hero-body">
 
       <div class="video-teaser">
-        <video poster="" autoplay muted width="50%" controls>
+        <video poster="" autoplay muted width="70%" controls>
           <source src="media/ICRA_teaser_high_res.mp4" type="video/mp4">
         </video>
       </div>
@@ -127,7 +126,7 @@
        <div class="container" style="padding-top:1.5rem; padding-bottom:0.5rem">
          <h2 class="subtitle has-text-centered">
          <span class="popi">Planner-Ordered Policy (PoPi)</span> is an approach for long-
-         horizon robot manipulation problems in which the dynamics are
+         horizon robot manipulation problems <br>in which the dynamics are
          partially unknown, for example, pushing and pulling a 5-wheeled office chair.</b>
          </h2>
        </div>
@@ -152,28 +151,28 @@
 
       <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;">Motivations</h3>
 
-      <h2 class="subtitle">
+      <p class="textbody">
         Many robot tasks involve finding and following a <b>long-horizon path</b>
         while interacting with an environment whose <b>dynamics are
         not known</b>.<br> For example, a robot arm pushing an object
         among obstacles on a table or a mobile robot pushing an
         office chair among furniture are both facing this type of
         problem.
-      </h2>
+      </p>
 
-      <img src="media/figures/website_motivation.png" class="full-image" style="width:60%;padding-bottom: 2.5rem" alt="" />
+      <img src="media/figures/website_motivation.png" class="full-image" style="width:60%; padding-top: 1rem; padding-bottom: 2.5rem" alt="" />
 
-      <h2 class="subtitle">
+      <p class="textbody">
         We seek an approach that <br>
         &nbsp;&nbsp;&nbsp;&nbsp;(1) allows the robot to be trained quickly in the real world, without access to a simulator, as the dynamics present a large sim-to-real gap, <br>
         &nbsp;&nbsp;&nbsp;&nbsp;(2) generalizes to somewhat different environment.<br><br>
         <span class="popi">Planner-Ordered Policy</span> learns a short-horizon, diffusion-based
         manipulation policy  policy via imitation learning and uses a “global” motion planner
         to define waypoints for the local policy.
-    </h2>
+      </p>
     
 
-      <img src="media/figures/website_venn_diagram.png" class="full-image" style="width:60%;padding-bottom: 0.5rem" alt="" />
+      <img src="media/figures/website_venn_diagram.png" class="full-image" style="width:70%; padding-bottom: 0.5rem; padding-top: 1rem" alt="" />
 
     </div>
   </div>
@@ -187,15 +186,7 @@
       <div class="row is-full-width">
       
       <h3 class="title is-3 has-text-centered">Abstract</h3>
-
-      <!-- <p class="justify">
-            <img src="media/figures/images.jpg" class="interpolation-image" width="480" align="right"
-                 style="margin:0% 1% "
-                 alt="Image views" />
-                 This paper introduces an approach for learning to solve continuous constraint satisfaction problems (CCSP) in robotic reasoning and planning. Previous methods primarily rely on hand-engineering or learning generators for specific constraint types and then rejecting the value assignments when other constraints are violated. By contrast, our model, the compositional diffusion continuous constraint solver (Diffusion-CCSP) derives global solutions to CCSPs by representing them as factor graphs and combining the energies of diffusion models trained to sample for individual constraint types. Diffusion-CCSP exhibits strong generalization to novel combinations of known constraints, and it can be integrated into a task and motion planner to devise long-horizon plans that include actions with both discrete and continuous parameters.
-          </p>
-        <br><br> -->
-        <p class="justify" style="padding-left: 8rem; padding-right: 8rem; padding-bottom: 2rem; ">
+        <p class="justify abstract">
             Manipulation of large objects over long horizons
             (such as carts in a warehouse) is an essential skill for deployable
             robotic systems. Large objects require mobile manipulation
@@ -225,6 +216,19 @@
 
       <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;"><span class="popi">Planner-Ordered Policy</span></h3>
       <img src="media/figures/popi.png" class="full-image" style="width:60%;padding-bottom: 2.5rem" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+      <div class="container is-max-widescreen" style="padding: 2rem; padding-top: 0rem;">
+
+        <div class="rows is-centered ">
+          <div class="row is-full-width">
+
       <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;">Experiments</h3>
 
         <img src="media/figures/domains.png" class="full-image" style="width:100%" alt="" />
@@ -241,7 +245,7 @@
         </div>
 
         <div style="padding-left: 4rem;">
-            <p>
+            <p><br>
               <b>Baselines</b>:
               <div class="baseline-container">
                 <div class="baseline-block">RRT</div>
@@ -272,48 +276,43 @@
 </section> -->
 
 
-<section class="hero is-light is-small">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
 
       <h3 class="title is-3 has-text-centered" style="padding-bottom: 20pt;">Results</h3>
 
-      <h3 class="subtitle has-text-centered">
+      <p class="textbody has-text-centered">
         We find that <span class="popi">PoPi</span> performs consistently better as the horizon
             increases, compared to a ”global” diffusion policy or motion
             planning assuming a rigidly-attached object. Importantly,
             PoPi generalizes to new layouts, grasps, chairs, and even
             flooring, without any further training.
-      </h3>
+      </p>
 
-      <h3 class="subtitle has-text-centered">
+      <h2 class="subtitle has-text-centered">
         <b>RRT vs <span class="popi">PoPi</span> vs Long-Horizon Diffusion</b>
-      </h3>
+      </h2>
 
-      <table class='video-results'>
-        <tr>
-          <td>
-            <video poster="" autoplay muted loop height="100%" playbackRate=2>
-              <source src="media/ours_vs_baselines.mp4" type="video/mp4">
-            </video>
-          </td>
-        </tr>
-      </table>
+      <div class="video-demo">
+        <video poster="" autoplay muted loop height="100%" playbackRate=2>
+        <source src="media/ours_vs_baselines.mp4" type="video/mp4">
+      </video>
+      </div>
 
-
-      <h3 class="subtitle has-text-centered">
+      <p class="textbody has-text-centered">
         RRT & <span class="popi">PoPi</span> perform well at short-horizons. As the horizon increases from 2m to 6m to 10m, RRT begins failing much more frequently than <span class="popi">PoPi</span>. The "Global" Diffusion policy is unable to capture dynamics at all.
-      </h3>
+      </p>
 
-      <h3 class="subtitle has-text-centered">
+      <h2 class="has-text-centered">
         <b>Testing Generalization</b>
-      </h3>
+      </h2>
 
       <img src="media/figures/generalization table.png" class="full-image" style="width:70%" alt="" />
 
 
       <h3 class="subtitle has-text-centered">
-        <span class="popi">PoPi</span>  maintains performance across environments & generalizes zero-shot to new conditions. It consistently outperforms the baselines.
+        <span class="popi">PoPi</span>  maintains performance across environments & generalizes zero-shot to new conditions. <br>It consistently outperforms the baselines.
       </h3>
 
     </div>
@@ -326,7 +325,7 @@
       <div class="container">
         <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
-            <h3 class="title is-3 has-text-centered">Video</h3>
+            <h3 class="title is-3 has-text-centered">Supplementary Video</h3>
             <div class="publication-video">
               <!-- https://www.youtube.com/watch?v=VLikGooIdwg&ab_channel=ZhutianYang-->
               <iframe src="media/ICRA_video_high_res.mp4"
@@ -353,7 +352,7 @@
       <div class="column">
         <div class="content has-text-centered">
           <p>
-            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> made by the amazing <a href="https://keunhong.com/">Keunhong Park</a> and <a href="https://mohitshridhar.com/">Mohit Shridhar</a>.
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> made by the amazing <a href="https://keunhong.com/">Keunhong Park</a>.
           </p>
         </div>
       </div>
